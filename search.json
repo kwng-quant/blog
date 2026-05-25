@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "People Analytics를 공부하고 기록하는 공간입니다.\nCJ대한통운에서 HR 데이터 분석과 분석 인프라를 다루며, Python(Polars·statsmodels)과 BI 도구로 조직과 사람에 관한 질문에 답을 찾아갑니다."
+  },
+  {
     "objectID": "posts/first-analysis/index.html",
     "href": "posts/first-analysis/index.html",
     "title": "첫 분석 노트: 근속연수 분포 살펴보기",
@@ -25,6 +32,6 @@
     "href": "index.html",
     "title": "David의 People Analytics 노트",
     "section": "",
-    "text": "첫 분석 노트: 근속연수 분포 살펴보기\n\n\n\npeople-analytics\n\npolars\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nCategories\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\n첫 분석 노트: 근속연수 분포 살펴보기\n\n\npeople-analytics, polars\n\n\n\n\n\n\nNo matching items"
   }
 ]
