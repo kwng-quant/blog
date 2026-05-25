@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "posts/first-analysis/index.html",
+    "href": "posts/first-analysis/index.html",
+    "title": "첫 분석 노트: 근속연수 분포 살펴보기",
+    "section": "",
+    "text": "Code\nimport polars as pl\nimport plotly.express as px\n\ndf = pl.DataFrame({\n    \"tenure\": [1, 2, 2, 3, 5, 5, 5, 8, 10, 12],\n    \"dept\": [\"HR\", \"HR\", \"IT\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\"],\n})\ndf.head()\n\n\n\nshape: (5, 2)\n\n\n\ntenure\ndept\n\n\ni64\nstr\n\n\n\n\n1\n\"HR\"\n\n\n2\n\"HR\"\n\n\n2\n\"IT\"\n\n\n3\n\"IT\"\n\n\n5\n\"HR\""
+  },
+  {
+    "objectID": "posts/first-analysis/index.html#데이터-불러오기",
+    "href": "posts/first-analysis/index.html#데이터-불러오기",
+    "title": "첫 분석 노트: 근속연수 분포 살펴보기",
+    "section": "",
+    "text": "Code\nimport polars as pl\nimport plotly.express as px\n\ndf = pl.DataFrame({\n    \"tenure\": [1, 2, 2, 3, 5, 5, 5, 8, 10, 12],\n    \"dept\": [\"HR\", \"HR\", \"IT\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\"],\n})\ndf.head()\n\n\n\nshape: (5, 2)\n\n\n\ntenure\ndept\n\n\ni64\nstr\n\n\n\n\n1\n\"HR\"\n\n\n2\n\"HR\"\n\n\n2\n\"IT\"\n\n\n3\n\"IT\"\n\n\n5\n\"HR\""
+  },
+  {
+    "objectID": "posts/first-analysis/index.html#분포-시각화",
+    "href": "posts/first-analysis/index.html#분포-시각화",
+    "title": "첫 분석 노트: 근속연수 분포 살펴보기",
+    "section": "분포 시각화",
+    "text": "분포 시각화\n\n\nCode\nfig = px.histogram(df.to_pandas(), x=\"tenure\", color=\"dept\",\n                   title=\"부서별 근속연수 분포\")\nfig.show()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "David의 People Analytics 노트",
+    "section": "",
+    "text": "첫 분석 노트: 근속연수 분포 살펴보기\n\n\n\npeople-analytics\n\npolars\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\n\n\n\nNo matching items"
+  }
+]
