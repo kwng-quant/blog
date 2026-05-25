@@ -1,0 +1,16 @@
+---
+title: "About"
+about:
+  template: trestles
+  image-shape: round
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/kwng-quant
+---
+
+People Analytics를 공부하고 기록하는 공간입니다.
+
+CJ대한통운에서 HR 데이터 분석과 분석 인프라를 다루며,
+Python(Polars·statsmodels)과 BI 도구로 조직과 사람에 관한
+질문에 답을 찾아갑니다.

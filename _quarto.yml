@@ -1,16 +1,36 @@
 project:
   type: website
-  output-dir: _site      # 빌드 결과물 위치 (기억해두세요)
+  output-dir: _site
 
 website:
   title: "David의 People Analytics 노트"
+  description: "People Analytics, 데이터 엔지니어링, 그리고 배움의 기록"
   navbar:
+    background: light
+    pinned: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/<your-username>
+        href: https://github.com/kwng-quant
+        aria-label: GitHub
+  page-footer:
+    center: "© 2026 David · Built with Quarto"
+    background: light
 
 format:
   html:
-    theme: cosmo
+    theme: litera
     css: styles.css
+    toc: true
+    toc-title: "목차"
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    fontsize: 1.05rem
+    linestretch: 1.7
+    grid:
+      body-width: 820px

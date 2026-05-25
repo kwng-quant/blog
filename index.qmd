@@ -1,11 +1,12 @@
 ---
 title: "David의 People Analytics 노트"
 listing:
-  contents: posts        # posts 폴더의 글들을 목록으로
-  sort: "date desc"       # 최신글 먼저
-  type: default
+  contents: posts
+  sort: "date desc"
+  type: table
+  fields: [date, title, categories]
+  table-hover: true
   categories: true
   feed: true
-page-layout: full
-title-block-banner: true
+page-layout: article
 ---
