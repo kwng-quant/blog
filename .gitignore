@@ -1,0 +1,18 @@
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto build artifacts
+/_site/
+/.sass-cache/
+/.cache/
+
+# Jupyter checkpoints
+**/.ipynb_checkpoints/
+
+# Python/uv artifacts
+/.venv/
+__pycache__/
+*.py[cod]
+
+# IDE files
+/.idea/

@@ -1,0 +1,16 @@
+project:
+  type: website
+  output-dir: _site      # 빌드 결과물 위치 (기억해두세요)
+
+website:
+  title: "David의 People Analytics 노트"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/<your-username>
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css

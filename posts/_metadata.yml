@@ -1,0 +1,8 @@
+# posts 폴더 내 모든 글에 공통 적용되는 옵션
+freeze: true
+
+# 글 목록에서 코드를 접어두고, 본문 안에서만 펼치는 기본값
+format:
+  html:
+    toc: true
+    code-fold: show
