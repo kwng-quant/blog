@@ -1,5 +1,82 @@
 [
   {
+    "objectID": "posts/001-sample-space-and-events/index.html",
+    "href": "posts/001-sample-space-and-events/index.html",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "",
+    "text": "확률을 공부할 때 사람들은 보통 “주사위에서 3이 나올 확률은 1/6” 같은 숫자부터 외웁니다. 하지만 그 1/6이라는 숫자가 어디서 나오는지를 따지면, 항상 그 밑에는 “가능한 결과 전체”라는 무대가 깔려 있습니다. 이 무대가 바로 표본공간(sample space)이고, 우리가 관심 있는 결과들의 묶음이 사건(event)입니다.\n이 글의 한 줄 요지는 이렇습니다.\n\n확률은 집합의 언어로 쓰여 있다. 표본공간은 집합이고, 사건은 그 부분집합이며, 사건의 연산은 집합 연산이다.\n\n이걸 코드로 옮길 때 자료형을 무엇으로 고르느냐가 사실 개념 이해의 시금석이 됩니다."
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#왜-표본공간에서-시작하는가",
+    "href": "posts/001-sample-space-and-events/index.html#왜-표본공간에서-시작하는가",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "",
+    "text": "확률을 공부할 때 사람들은 보통 “주사위에서 3이 나올 확률은 1/6” 같은 숫자부터 외웁니다. 하지만 그 1/6이라는 숫자가 어디서 나오는지를 따지면, 항상 그 밑에는 “가능한 결과 전체”라는 무대가 깔려 있습니다. 이 무대가 바로 표본공간(sample space)이고, 우리가 관심 있는 결과들의 묶음이 사건(event)입니다.\n이 글의 한 줄 요지는 이렇습니다.\n\n확률은 집합의 언어로 쓰여 있다. 표본공간은 집합이고, 사건은 그 부분집합이며, 사건의 연산은 집합 연산이다.\n\n이걸 코드로 옮길 때 자료형을 무엇으로 고르느냐가 사실 개념 이해의 시금석이 됩니다."
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#표본공간sample-space",
+    "href": "posts/001-sample-space-and-events/index.html#표본공간sample-space",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "표본공간(Sample Space)",
+    "text": "표본공간(Sample Space)\n표본공간은 한 번의 실험(experiment)에서 나올 수 있는 모든 결과의 집합입니다. 보통 \\(S\\) 또는 \\(\\Omega\\)로 씁니다.\n핵심은 세 가지입니다.\n\n빠짐없이(exhaustive) — 일어날 수 있는 결과가 전부 들어 있어야 합니다.\n겹침 없이(mutually exclusive) — 각 결과는 서로 구분되어, 한 번에 하나만 일어납니다.\n집합이다 — 순서도 중복도 의미가 없습니다.\n\n주사위 한 번 던지기의 표본공간:\n\\[S = \\{1, 2, 3, 4, 5, 6\\}\\]\n표본공간은 숫자일 필요가 없다는 점도 기억해 둘 만합니다. 예를 들어 한 직원의 다음 분기 평가 등급이라는 실험의 표본공간은\n\\[S = \\{S,\\ A,\\ B,\\ C,\\ D\\}\\]\n처럼 범주(category)일 수도 있습니다. 무대는 숫자가 아니라 ’가능한 결과들’이라는 점이 본질입니다."
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#사건event",
+    "href": "posts/001-sample-space-and-events/index.html#사건event",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "사건(Event)",
+    "text": "사건(Event)\n사건은 표본공간의 부분집합입니다. “관심 있는 결과들의 모음”이라고 보면 됩니다.\n\n“짝수가 나온다” → \\(A = \\{2, 4, 6\\}\\)\n“4 이상이 나온다” → \\(B = \\{4, 5, 6\\}\\)\n“7이 나온다” → \\(\\varnothing\\) (불가능 사건, 공집합)\n“1에서 6 사이가 나온다” → \\(S\\) (확실한 사건, 표본공간 전체)\n\n정의가 “부분집합”이라는 사실에 주목하세요. 사건이라는 개념 자체가 이미 집합론 위에 서 있습니다."
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#python에서는-set으로-list가-아닌-이유",
+    "href": "posts/001-sample-space-and-events/index.html#python에서는-set으로-list가-아닌-이유",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "Python에서는 set으로 — list가 아닌 이유",
+    "text": "Python에서는 set으로 — list가 아닌 이유\n자연스럽게 질문이 나옵니다. “그럼 Python에서 [1, 2, 3, 4, 5, 6] 같은 리스트로 쓰면 되나?”\n쓸 수는 있지만, 개념과 어긋납니다. 표본공간과 사건은 집합이므로 Python의 set이 정의에 정확히 대응합니다. 이유를 본질적으로 따지면:\n\n\n\n\n\n\n\n\n\n성질\n집합(수학)\nset\nlist\n\n\n\n\n중복\n허용 안 함\n허용 안 함 ✅\n허용함 ❌\n\n\n순서\n의미 없음\n의미 없음 ✅\n의미 있음 ❌\n\n\n부분집합·합·교·여집합\n기본 연산\n연산자 내장 ✅\n직접 구현해야 함 ❌\n\n\n\n\n# 표본공간: 주사위 한 번 던지기\nS = {1, 2, 3, 4, 5, 6}\n\n# 사건은 표본공간의 부분집합\nA = {2, 4, 6}   # 짝수가 나오는 사건\nB = {4, 5, 6}   # 4 이상이 나오는 사건\n\nprint(\"표본공간 S =\", S)\nprint(\"사건 A (짝수) =\", A)\nprint(\"사건 B (4 이상) =\", B)\nprint(\"A는 S의 부분집합인가?\", A &lt;= S)\n\n표본공간 S = {1, 2, 3, 4, 5, 6}\n사건 A (짝수) = {2, 4, 6}\n사건 B (4 이상) = {4, 5, 6}\nA는 S의 부분집합인가? True"
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#사건의-연산-집합의-연산",
+    "href": "posts/001-sample-space-and-events/index.html#사건의-연산-집합의-연산",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "사건의 연산 = 집합의 연산",
+    "text": "사건의 연산 = 집합의 연산\n사건을 set으로 표현하면, 수학 기호가 Python 연산자로 1:1 대응됩니다. 이 표 하나가 이 글에서 가장 중요한 부분입니다.\n\n\n\n말로 표현\n수학 기호\nPython\n\n\n\n\nA 또는 B (합집합)\n\\(A \\cup B\\)\nA \\| B\n\n\nA 그리고 B (교집합)\n\\(A \\cap B\\)\nA & B\n\n\nA가 아님 (여집합)\n\\(A^c\\)\nS - A\n\n\nA이지만 B는 아님 (차집합)\n\\(A \\setminus B\\)\nA - B\n\n\nA가 B의 부분집합\n\\(A \\subseteq B\\)\nA &lt;= B\n\n\n\n\nprint(\"A ∪ B (또는)      :\", A | B)   # 합집합\nprint(\"A ∩ B (그리고)    :\", A & B)   # 교집합\nprint(\"Aᶜ   (A가 아님)   :\", S - A)   # 여집합\nprint(\"A \\\\ B (A이고 B아님):\", A - B)   # 차집합\n\nA ∪ B (또는)      : {2, 4, 5, 6}\nA ∩ B (그리고)    : {4, 6}\nAᶜ   (A가 아님)   : {1, 3, 5}\nA \\ B (A이고 B아님): {2}\n\n\n여집합을 구할 때 S - A라고 쓰는 게 중요합니다. “A가 아니다”는 항상 “표본공간 안에서 A를 뺀 것”이기 때문입니다. 여집합은 표본공간 없이는 정의되지 않습니다 — 무대가 정해져야 “그 밖”을 말할 수 있다는 뜻이죠."
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#결과가-쌍일-때-원소를-튜플로",
+    "href": "posts/001-sample-space-and-events/index.html#결과가-쌍일-때-원소를-튜플로",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "결과가 ’쌍’일 때 — 원소를 튜플로",
+    "text": "결과가 ’쌍’일 때 — 원소를 튜플로\n실험이 복잡해지면 결과 하나가 여러 값의 조합이 됩니다. 주사위를 두 개 던지면, 한 결과는 \\((i, j)\\) 같은 순서쌍입니다. 집합의 원소로 tuple을 쓰면 그대로 표현됩니다.\n\n# 주사위 두 개 던지기: 결과는 순서쌍 (첫째, 둘째)\nS2 = {(i, j) for i in range(1, 7) for j in range(1, 7)}\nprint(\"표본공간 크기:\", len(S2))   # 6 x 6 = 36\n\n# 사건: 두 눈의 합이 7\nsum_is_7 = {(i, j) for (i, j) in S2 if i + j == 7}\nprint(\"합이 7인 사건:\", sorted(sum_is_7))\nprint(\"이 사건의 결과 수:\", len(sum_is_7))\n\n표본공간 크기: 36\n합이 7인 사건: [(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)]\n이 사건의 결과 수: 6\n\n\n여기서 “합이 7일 확률”의 정의가 자연스럽게 따라옵니다. 결과가 모두 똑같이 일어난다(equally likely)고 가정하면,\n\\[P(\\text{합}=7) = \\frac{|\\{(i,j): i+j=7\\}|}{|S|} = \\frac{6}{36} = \\frac{1}{6}\\]\n\np_sum7 = len(sum_is_7) / len(S2)\nprint(f\"P(합=7) = {p_sum7:.4f}\")\n\nP(합=7) = 0.1667\n\n\n확률이 결국 “사건의 크기 ÷ 표본공간의 크기”, 즉 부분집합의 원소 수를 세는 일로 환원되는 게 보입니다."
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#정의로서의-확률-vs-빈도로서의-확률",
+    "href": "posts/001-sample-space-and-events/index.html#정의로서의-확률-vs-빈도로서의-확률",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "정의로서의 확률 vs 빈도로서의 확률",
+    "text": "정의로서의 확률 vs 빈도로서의 확률\n지금까지 구한 확률은 이론값입니다 — 표본공간을 다 알고, 모든 결과가 똑같이 일어난다고 가정해서 계산했죠. 그런데 현실에서는 실제로 던져 보고 빈도로 확률을 추정하기도 합니다. 이 둘이 같은 값으로 수렴한다는 게 확률론의 출발점(큰 수의 법칙)입니다.\n먼저 주사위를 여러 번 던지는 시뮬레이션을 합니다. 여기서는 순서와 중복이 의미 있는 관측값을 다루므로, 자료형이 set이 아니라 list(혹은 배열)로 바뀐다는 점에 주목하세요. 개념을 정의할 땐 set, 실험을 기록할 땐 list — 자료형이 역할에 따라 갈립니다.\n\nimport numpy as np\n\nrng = np.random.default_rng(42)\nn = 2000\nrolls = rng.integers(1, 7, size=n)   # 1~6 사이 정수를 n번 추출 (관측 기록)\n\n# \"짝수가 나오는 사건\"의 상대빈도\nis_even = (rolls % 2 == 0)\nfreq_even = is_even.mean()\n\nprint(f\"{n}번 던졌을 때 짝수의 상대빈도 = {freq_even:.4f}\")\nprint(\"이론값 P(짝수) = 0.5\")\n\n2000번 던졌을 때 짝수의 상대빈도 = 0.4940\n이론값 P(짝수) = 0.5"
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#빈도가-이론값으로-수렴하는-모습",
+    "href": "posts/001-sample-space-and-events/index.html#빈도가-이론값으로-수렴하는-모습",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "빈도가 이론값으로 수렴하는 모습",
+    "text": "빈도가 이론값으로 수렴하는 모습\n던지는 횟수를 늘릴수록 상대빈도가 이론값 0.5로 다가가는 과정을 그려 봅니다.\n\nimport matplotlib.pyplot as plt\n\n# 누적 상대빈도: 매 시점까지의 짝수 비율\nrunning_freq = np.cumsum(is_even) / np.arange(1, n + 1)\n\nplt.figure(figsize=(8, 4))\nplt.plot(running_freq, lw=1, label=\"Observed relative frequency\")\nplt.axhline(0.5, color=\"red\", ls=\"--\", label=\"Theoretical P = 0.5\")\nplt.xlabel(\"Number of trials\")\nplt.ylabel(\"Relative frequency of even\")\nplt.title(\"Relative frequency converges to the theoretical probability\")\nplt.legend()\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n초반에는 출렁이지만 시행이 쌓일수록 0.5 부근으로 가라앉습니다. 표본공간 위에서 계산한 이론적 확률과, 실험에서 관측한 빈도가 만나는 지점 — 이것이 다음 글들에서 다룰 큰 수의 법칙의 직관입니다.\n\n\n\n\n\n\nNote\n\n\n\n그림의 축 라벨은 한글 폰트 설정 없이도 깨지지 않도록 영어로 두었습니다. 한글 라벨을 쓰려면 matplotlib에 한글 폰트(예: Malgun Gothic, AppleGothic, NanumGothic)를 지정하면 됩니다."
+  },
+  {
+    "objectID": "posts/001-sample-space-and-events/index.html#정리",
+    "href": "posts/001-sample-space-and-events/index.html#정리",
+    "title": "표본공간과 사건: 확률의 출발점",
+    "section": "정리",
+    "text": "정리\n\n표본공간 \\(S\\): 가능한 모든 결과의 집합. 빠짐없이, 겹침 없이.\n사건: 표본공간의 부분집합. “관심 있는 결과들.”\n개념을 코드로 옮길 땐 set — 중복·순서가 없고, 합·교·여집합 연산이 수학 기호와 그대로 대응합니다.\n결과가 조합이면 원소를 tuple로.\n확률은 결국 부분집합의 크기를 세는 일이고, 실험을 기록·시뮬레이션할 땐 list/배열로 빈도를 본다.\n\n다음 글에서는 이 위에서 확률의 공리(axioms of probability)와 조건부 확률로 넘어가, “사건이 일어났다는 정보가 다른 사건의 확률을 어떻게 바꾸는가”를 다뤄 보겠습니다."
+  },
+  {
+    "objectID": "notebooks/직교.html",
+    "href": "notebooks/직교.html",
+    "title": "David의 People Analytics 노트",
+    "section": "",
+    "text": "import numpy as np\n\n# 평균 중심화(centering)한 두 변수의 상관계수 = 두 벡터의 코사인 각도\n# 상관 0 = 코사인 0 = 90도 = 직교(orthogonal)\n\nnp.random.seed(42)\nx = np.random.randn(100)\ny = np.random.randn(100)  # x와 무관하게 생성\n\nxc = x - x.mean()\nyc = y - y.mean()\n\ncorr = np.corrcoef(x, y)[0, 1]                                    # 통계적 정의\ncos_angle = np.dot(xc, yc) / (np.linalg.norm(xc) * np.linalg.norm(yc))  # 기하학적 정의\n\nprint(f\"상관계수      : {corr:.4f}\")\nprint(f\"코사인(벡터각): {cos_angle:.4f}\")\nprint(f\"같은 값인가   : {np.isclose(corr, cos_angle)}\")\n\n상관계수      : -0.1364\n코사인(벡터각): -0.1364\n같은 값인가   : True\n\n\n\n# 직교(상관 0)인데 명백히 종속인 반례\nx = np.linspace(-3, 3, 200)\ny = x**2                          # 완벽한 함수 관계\nprint(f\"상관계수: {np.corrcoef(x, y)[0, 1]:.4f}\")  # ≈ 0\n# 선형 상관은 0이지만 y는 x로 완전히 결정된다 → 직교가 독립을 뜻하지 않는다\n\n상관계수: -0.0000"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -7,31 +84,17 @@
     "text": "People Analytics를 공부하고 기록하는 공간입니다.\nCJ대한통운에서 HR 데이터 분석과 분석 인프라를 다루며, Python(Polars·statsmodels)과 BI 도구로 조직과 사람에 관한 질문에 답을 찾아갑니다."
   },
   {
-    "objectID": "posts/first-analysis/index.html",
-    "href": "posts/first-analysis/index.html",
-    "title": "첫 분석 노트: 근속연수 분포 살펴보기",
-    "section": "",
-    "text": "Code\nimport polars as pl\nimport plotly.express as px\n\ndf = pl.DataFrame({\n    \"tenure\": [1, 2, 2, 3, 5, 5, 5, 8, 10, 12],\n    \"dept\": [\"HR\", \"HR\", \"IT\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\"],\n})\ndf.head()\n\n\n\nshape: (5, 2)\n\n\n\ntenure\ndept\n\n\ni64\nstr\n\n\n\n\n1\n\"HR\"\n\n\n2\n\"HR\"\n\n\n2\n\"IT\"\n\n\n3\n\"IT\"\n\n\n5\n\"HR\""
-  },
-  {
-    "objectID": "posts/first-analysis/index.html#데이터-불러오기",
-    "href": "posts/first-analysis/index.html#데이터-불러오기",
-    "title": "첫 분석 노트: 근속연수 분포 살펴보기",
-    "section": "",
-    "text": "Code\nimport polars as pl\nimport plotly.express as px\n\ndf = pl.DataFrame({\n    \"tenure\": [1, 2, 2, 3, 5, 5, 5, 8, 10, 12],\n    \"dept\": [\"HR\", \"HR\", \"IT\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\", \"HR\", \"IT\"],\n})\ndf.head()\n\n\n\nshape: (5, 2)\n\n\n\ntenure\ndept\n\n\ni64\nstr\n\n\n\n\n1\n\"HR\"\n\n\n2\n\"HR\"\n\n\n2\n\"IT\"\n\n\n3\n\"IT\"\n\n\n5\n\"HR\""
-  },
-  {
-    "objectID": "posts/first-analysis/index.html#분포-시각화",
-    "href": "posts/first-analysis/index.html#분포-시각화",
-    "title": "첫 분석 노트: 근속연수 분포 살펴보기",
-    "section": "분포 시각화",
-    "text": "분포 시각화\n\n\nCode\nfig = px.histogram(df.to_pandas(), x=\"tenure\", color=\"dept\",\n                   title=\"부서별 근속연수 분포\")\nfig.show()"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "David의 People Analytics 노트",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nCategories\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\n첫 분석 노트: 근속연수 분포 살펴보기\n\n\npeople-analytics, polars\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nCategories\n\n\n\n\n\n\n\n\nMay 30, 2026\n\n\n표본공간과 사건: 확률의 출발점\n\n\n통계학, 확률, Python\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notebooks/연습장.html",
+    "href": "notebooks/연습장.html",
+    "title": "David의 People Analytics 노트",
+    "section": "",
+    "text": "{(i, j) for i in range (1, 7) for j in range (1, 7)}\n\n{(1, 1),\n (1, 2),\n (1, 3),\n (1, 4),\n (1, 5),\n (1, 6),\n (2, 1),\n (2, 2),\n (2, 3),\n (2, 4),\n (2, 5),\n (2, 6),\n (3, 1),\n (3, 2),\n (3, 3),\n (3, 4),\n (3, 5),\n (3, 6),\n (4, 1),\n (4, 2),\n (4, 3),\n (4, 4),\n (4, 5),\n (4, 6),\n (5, 1),\n (5, 2),\n (5, 3),\n (5, 4),\n (5, 5),\n (5, 6),\n (6, 1),\n (6, 2),\n (6, 3),\n (6, 4),\n (6, 5),\n (6, 6)}"
   }
 ]
